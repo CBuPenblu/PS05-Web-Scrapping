@@ -1,10 +1,10 @@
 import scrapy
 
 
-class DivannewparsSpider(scrapy.Spider):
-    name = "divannewpars"
-    allowed_domains = ["https://divan.ru"]
-    start_urls = ["https://divan.ru/category/svet"]
+class LightingSpider(scrapy.Spider):
+    name = "lighting"
+    allowed_domains = ["divan.ru"]
+    start_urls = ["https://divan.ru/catalog/svet/"]
 
     def parse(self, response):
         lights = response.css('div._Ud0k')
